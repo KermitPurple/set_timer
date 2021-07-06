@@ -8,5 +8,32 @@
         <script src="index.js" defer></script>
     </head>
     <body>
+        <div class=center-flex>
+
+            <!-- Input number of sets and time in between sets -->
+            <div class=box id=inputs>
+                <h1>Set Timer</h1>
+                <label for=sets>Number of sets</label>
+                <div class=sets>
+                    <input type=number name=sets>
+                </div>
+                <label>Rest between sets</label>
+                <div class=rest>
+                    <input type=number name=mins placeholder=minutes>
+                    <input type=number name=secs placeholder=seconds>
+                </div>
+            </div>
+
+            <!-- Stop watch keeping track of time of current set -->
+            <div class="box hidden" id=stopwatch>
+            </div>
+
+            <!-- counter counting down rest time -->
+            <div class="box hidden" id=countdown>
+                <h1 id=flair-text>Countdown</h1>
+                <h1 id=countdown-time>00:00</h1>
+            </div>
+
+        </div>
     </body>
 </html>

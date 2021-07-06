@@ -1,5 +1,5 @@
 class CountdownTimer{
-    constructor(seconds, delay = 200, func = (_)=>{}){
+    constructor(seconds, delay = 200, func = (_)=>{}, end_func = (_)=>{}){
         this.max_seconds = seconds;
         this.remaining_seconds = seconds;
         this.elapsed_seconds = 0;
@@ -14,6 +14,7 @@ class CountdownTimer{
                     elapsed_seconds: this.max_seconds,
                     remaining_seconds: 0,
                 });
+                end_func();
                 this.stop();
             }else{
                 func({
