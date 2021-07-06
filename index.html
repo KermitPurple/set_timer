@@ -22,15 +22,19 @@
                     <input type=number name=mins placeholder=minutes>
                     <input type=number name=secs placeholder=seconds>
                 </div>
+                <button id=inputs-button>Start</button>
             </div>
 
             <!-- Stop watch keeping track of time of current set -->
             <div class="box hidden" id=stopwatch>
+                <h1 id=stopwatch-flair-text>StopWatch</h1>
+                <h1 id=stopwatch-time>00:00</h1>
+                <button id=stopwatch-button onclick="stop_stopwatch()">Stop</button>
             </div>
 
             <!-- counter counting down rest time -->
             <div class="box hidden" id=countdown>
-                <h1 id=flair-text>Countdown</h1>
+                <h1 id=countdown-flair-text>Countdown</h1>
                 <h1 id=countdown-time>00:00</h1>
             </div>
 
