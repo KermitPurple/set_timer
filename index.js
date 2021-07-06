@@ -37,10 +37,8 @@ function start_countdown(seconds, flair_text){
     new CountdownTimer(seconds, 200, data=>{
         countdown_time_el.innerHTML = seconds_to_timestring(data.remaining_seconds);
         },
-        ()=>{
-            sets_left--;
-            start_stopwatch(`Set ${get_sets() - sets_left + 1}`);
-        }
+        ()=>start_stopwatch(`Set ${get_sets() - sets_left + 1}`)
+        
     );
 }
 
@@ -54,6 +52,7 @@ function start_stopwatch(flair_text){
 
 function stop_stopwatch(){
     stopwatch?.stop();
+    sets_left--;
     if(sets_left <= 0)
         show_box('inputs');
     else
